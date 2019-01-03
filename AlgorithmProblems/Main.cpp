@@ -4,6 +4,8 @@
 int main()
 {
 	Solution::test();
-	std::cout << "Hello World" << std::endl;
+	int key = 1;
+	std::string hehe = "helloworld";
+	std::cout << &key << " " << &hehe << std::endl;
 	system("pause");
 }
