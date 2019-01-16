@@ -21,9 +21,18 @@
     <ClCompile Include="Solution.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Duplicate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solution.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AllProblems.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Duplicate.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

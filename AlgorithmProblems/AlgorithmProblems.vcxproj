@@ -115,10 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Duplicate.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AllProblems.h" />
+    <ClInclude Include="Duplicate.h" />
     <ClInclude Include="Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
