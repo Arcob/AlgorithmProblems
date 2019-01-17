@@ -23,7 +23,7 @@
     <ProjectGuid>{765BA3CD-7589-4948-9AA0-7F2EF44EEC28}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GetDuplication</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
