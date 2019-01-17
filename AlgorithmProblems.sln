@@ -3,20 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgorithmProblems", "AlgorithmProblems\AlgorithmProblems.vcxproj", "{918E6B44-A3CF-4C12-8594-F97B09F59A73}"
-	ProjectSection(ProjectDependencies) = postProject
-		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7} = {732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_Duplicae", "AlgorithmProblems\AlgorithmProblems.vcxproj", "{918E6B44-A3CF-4C12-8594-F97B09F59A73}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{F2DC36A6-A198-4E73-B0CD-4D5A52B3EE2E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetDuplication", "GetDuplication\GetDuplication.vcxproj", "{765BA3CD-7589-4948-9AA0-7F2EF44EEC28}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0302_GetDuplication", "GetDuplication\GetDuplication.vcxproj", "{765BA3CD-7589-4948-9AA0-7F2EF44EEC28}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindInPartiallySortedMatrix", "FindInPartiallySortedMatrix\FindInPartiallySortedMatrix.vcxproj", "{42D2FB78-AF27-47A7-940A-B16836622FE7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_FindInPartiallySortedMatrix", "FindInPartiallySortedMatrix\FindInPartiallySortedMatrix.vcxproj", "{42D2FB78-AF27-47A7-940A-B16836622FE7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplaceSpaces", "ReplaceSpaces\ReplaceSpaces.vcxproj", "{68F78151-D0B0-4B69-890C-FB6B5826F654}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_ReplaceSpaces", "ReplaceSpaces\ReplaceSpaces.vcxproj", "{68F78151-D0B0-4B69-890C-FB6B5826F654}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintListInReversedOrder", "PrintListInReversedOrder\PrintListInReversedOrder.vcxproj", "{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_PrintListInReversedOrder", "PrintListInReversedOrder\PrintListInReversedOrder.vcxproj", "{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7} = {732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}
 	EndProjectSection

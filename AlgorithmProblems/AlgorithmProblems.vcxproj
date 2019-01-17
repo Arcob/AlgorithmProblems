@@ -23,6 +23,7 @@
     <ProjectGuid>{918E6B44-A3CF-4C12-8594-F97B09F59A73}</ProjectGuid>
     <RootNamespace>AlgorithmProblems</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>03_Duplicae</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
