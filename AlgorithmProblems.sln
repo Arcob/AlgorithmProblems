@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgorithmProblems", "AlgorithmProblems\AlgorithmProblems.vcxproj", "{918E6B44-A3CF-4C12-8594-F97B09F59A73}"
+	ProjectSection(ProjectDependencies) = postProject
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7} = {732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{F2DC36A6-A198-4E73-B0CD-4D5A52B3EE2E}"
 EndProject
@@ -12,6 +15,13 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindInPartiallySortedMatrix", "FindInPartiallySortedMatrix\FindInPartiallySortedMatrix.vcxproj", "{42D2FB78-AF27-47A7-940A-B16836622FE7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplaceSpaces", "ReplaceSpaces\ReplaceSpaces.vcxproj", "{68F78151-D0B0-4B69-890C-FB6B5826F654}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintListInReversedOrder", "PrintListInReversedOrder\PrintListInReversedOrder.vcxproj", "{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7} = {732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utilities", "Utilities\Utilities.vcxproj", "{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +71,22 @@ Global
 		{68F78151-D0B0-4B69-890C-FB6B5826F654}.Release|x64.Build.0 = Release|x64
 		{68F78151-D0B0-4B69-890C-FB6B5826F654}.Release|x86.ActiveCfg = Release|Win32
 		{68F78151-D0B0-4B69-890C-FB6B5826F654}.Release|x86.Build.0 = Release|Win32
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Debug|x64.ActiveCfg = Debug|x64
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Debug|x64.Build.0 = Debug|x64
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Debug|x86.Build.0 = Debug|Win32
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Release|x64.ActiveCfg = Release|x64
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Release|x64.Build.0 = Release|x64
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Release|x86.ActiveCfg = Release|Win32
+		{B8C2D0FE-8441-466F-A9DD-C0E260E368CB}.Release|x86.Build.0 = Release|Win32
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Debug|x64.ActiveCfg = Debug|x64
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Debug|x64.Build.0 = Debug|x64
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Debug|x86.ActiveCfg = Debug|Win32
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Debug|x86.Build.0 = Debug|Win32
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Release|x64.ActiveCfg = Release|x64
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Release|x64.Build.0 = Release|x64
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Release|x86.ActiveCfg = Release|Win32
+		{732DA13A-F8BB-4CEF-B96D-61DE60BDB6A7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
