@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{0AE22574-14FE-49E2-8D57-6B670B409E3F}</ProjectGuid>
+    <ProjectGuid>{3865701B-7892-4E39-A8B1-D5F86F0947E7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My07ConstructBinaryTree</RootNamespace>
+    <RootNamespace>My22KthNodeFromEnd</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,12 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07_ConstructBinaryTree.cpp" />
-    <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="22_KthNodeFromEnd.cpp" />
+    <ClCompile Include="List.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
