@@ -23,7 +23,7 @@
     <ProjectGuid>{0690B32C-70EC-4F50-A3AF-D4D06AD93DF0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My19RegularExpressionsMatching</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
