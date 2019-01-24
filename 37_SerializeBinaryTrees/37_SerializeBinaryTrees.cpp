@@ -41,12 +41,12 @@ bool ReadStream(istream& stream, int* number)
 	}
 
 	bool isNumeric = false;
-	if (i > 0 && buffer[0] != '$')
+	if (i > 0 && buffer[0] != '$')	
 	{
 		*number = atoi(buffer);
 		isNumeric = true;
 	}
-
+	
 	return isNumeric;
 }
 

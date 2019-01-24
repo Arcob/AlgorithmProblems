@@ -82,6 +82,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "36_ConvertBinarySearchTree"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "37_SerializeBinaryTrees", "37_SerializeBinaryTrees\37_SerializeBinaryTrees.vcxproj", "{1240B30B-CFE5-4E7C-BB56-971C796993A4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "38_StringPermutation", "38_StringPermutation\38_StringPermutation.vcxproj", "{4A202CB1-E92D-447C-9988-BFA3BE13ACED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -394,6 +396,14 @@ Global
 		{1240B30B-CFE5-4E7C-BB56-971C796993A4}.Release|x64.Build.0 = Release|x64
 		{1240B30B-CFE5-4E7C-BB56-971C796993A4}.Release|x86.ActiveCfg = Release|Win32
 		{1240B30B-CFE5-4E7C-BB56-971C796993A4}.Release|x86.Build.0 = Release|Win32
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Debug|x64.ActiveCfg = Debug|x64
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Debug|x64.Build.0 = Debug|x64
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Debug|x86.ActiveCfg = Debug|Win32
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Debug|x86.Build.0 = Debug|Win32
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Release|x64.ActiveCfg = Release|x64
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Release|x64.Build.0 = Release|x64
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Release|x86.ActiveCfg = Release|Win32
+		{4A202CB1-E92D-447C-9988-BFA3BE13ACED}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
