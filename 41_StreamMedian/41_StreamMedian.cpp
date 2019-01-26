@@ -3,19 +3,130 @@
 
 #include "pch.h"
 #include <iostream>
+// 面试题41：数据流中的中位数
+// 题目：如何得到一个数据流中的中位数？如果从数据流中读出奇数个数值，那么
+// 中位数就是所有数值排序之后位于中间的数值。如果从数据流中读出偶数个数值，
+// 那么中位数就是所有数值排序之后中间两个数的平均值。
 
-int main()
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <functional>
+
+using namespace std;
+
+template<typename T> class DynamicArray
 {
-    std::cout << "Hello World!\n"; 
+public:
+	void Insert(T num)
+	{
+		if (((min.size() + max.size()) & 1) == 0)
+		{
+			if (max.size() > 0 && num < max[0])
+			{
+				max.push_back(num);
+				push_heap(max.begin(), max.end(), less<T>());
+
+				num = max[0];
+
+				pop_heap(max.begin(), max.end(), less<T>());
+				max.pop_back();
+			}
+
+			min.push_back(num);
+			push_heap(min.begin(), min.end(), greater<T>());
+		}
+		else
+		{
+			if (min.size() > 0 && min[0] < num)
+			{
+				min.push_back(num);
+				push_heap(min.begin(), min.end(), greater<T>());
+
+				num = min[0];
+
+				pop_heap(min.begin(), min.end(), greater<T>());
+				min.pop_back();
+			}
+
+			max.push_back(num);
+			push_heap(max.begin(), max.end(), less<T>());
+		}
+	}
+
+	T GetMedian()
+	{
+		int size = min.size() + max.size();
+		if (size == 0)
+			throw exception("No numbers are available");
+
+		T median = 0;
+		if ((size & 1) == 1)
+			median = min[0];
+		else
+			median = (min[0] + max[0]) / 2;
+
+		return median;
+	}
+
+private:
+	vector<T> min;
+	vector<T> max;
+};
+
+// ====================测试代码====================
+void Test(const char* testName, DynamicArray<double>& numbers, double expected)
+{
+	if (testName != nullptr)
+		printf("%s begins: ", testName);
+
+	if (abs(numbers.GetMedian() - expected) < 0.0000001)
+		printf("Passed.\n");
+	else
+		printf("FAILED.\n");
 }
 
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
+int main(int argc, char* argv[])
+{
+	DynamicArray<double> numbers;
 
-// 入门提示: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+	printf("Test1 begins: ");
+	try
+	{
+		numbers.GetMedian();
+		printf("FAILED.\n");
+	}
+	catch (const exception&)
+	{
+		printf("Passed.\n");
+	}
+
+	numbers.Insert(5);
+	Test("Test2", numbers, 5);
+
+	numbers.Insert(2);
+	Test("Test3", numbers, 3.5);
+
+	numbers.Insert(3);
+	Test("Test4", numbers, 3);
+
+	numbers.Insert(4);
+	Test("Test6", numbers, 3.5);
+
+	numbers.Insert(1);
+	Test("Test5", numbers, 3);
+
+	numbers.Insert(6);
+	Test("Test7", numbers, 3.5);
+
+	numbers.Insert(7);
+	Test("Test8", numbers, 4);
+
+	numbers.Insert(0);
+	Test("Test9", numbers, 3.5);
+
+	numbers.Insert(8);
+	Test("Test10", numbers, 4);
+
+	return 0;
+}
