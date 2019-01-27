@@ -46,8 +46,8 @@ int NumberOf1Between1AndN_Solution2(int n)
 		return 0;
 
 	char strN[50];
-	sprintf(strN, "%d", n);
-
+	sprintf_s(strN, "%d", n);//把n格式化输出到字符串
+	std::cout << strN << std::endl;
 	return NumberOf1(strN);
 }
 
@@ -58,7 +58,7 @@ int NumberOf1(const char* strN)
 
 	int first = *strN - '0';
 	unsigned int length = static_cast<unsigned int>(strlen(strN));
-
+	//length = strlen(strN);
 	if (length == 1 && first == 0)
 		return 0;
 
