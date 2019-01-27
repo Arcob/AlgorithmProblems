@@ -45,6 +45,41 @@ int Min(int number1, int number2, int number3);
 
 int GetUglyNumber_Solution2(int index)
 {
+	if (index <= 0) {
+		return 0;
+	}
+
+	int* uglyNumbers = new int[index];
+	uglyNumbers[0] = 1;
+	int nextUglyIndex = 1;
+
+	int * pMultiply2 = uglyNumbers;
+	int * pMultiply3 = uglyNumbers;
+	int * pMultiply5 = uglyNumbers;
+
+	while (nextUglyIndex < index) {
+		int next = Min(*pMultiply2 * 2, *pMultiply3 * 3, *pMultiply5 * 5);
+		uglyNumbers[nextUglyIndex] = next;
+
+		while (*pMultiply2 * 2 <= next) {
+			pMultiply2++;;
+		}
+
+		while (*pMultiply3 * 3 <= next) {
+			pMultiply3++;;
+		}
+
+		while (*pMultiply5 * 5 <= next) {
+			pMultiply5++;;
+		}
+
+		nextUglyIndex++;
+	}
+
+	int ugly = uglyNumbers[nextUglyIndex - 1];
+	delete[] uglyNumbers;
+	return ugly;
+
 	return 0;
 }
 
@@ -72,6 +107,14 @@ void Test(int index, int expected)
 
 int main(int argc, char* argv[])
 {
+	/*int * testPtr = new int[10];
+	std::cout << testPtr << std::endl;
+	std::cout << reinterpret_cast<int>(testPtr) << std::endl;
+	int * testPtr2 = testPtr+1;
+	std::cout << testPtr2 << std::endl;
+	std::cout << reinterpret_cast<int>(testPtr2) << std::endl;
+	std::cout << reinterpret_cast<int>(testPtr) << std::endl;*/
+
 	Test(1, 1);
 
 	Test(2, 2);
