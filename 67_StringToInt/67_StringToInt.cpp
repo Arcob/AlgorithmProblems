@@ -20,8 +20,9 @@ int StrToInt(const char* str)
 	if (str != nullptr && *str != '\0')
 	{
 		bool minus = false;
-		if (*str == '+')
+		if (*str == '+') {
 			str++;
+		}
 		else if (*str == '-')
 		{
 			str++;
