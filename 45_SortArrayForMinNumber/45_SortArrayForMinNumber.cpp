@@ -9,7 +9,7 @@
 #include "cstdio"
 #include <string>
 #include <algorithm>
-
+;
 int compare(const void* strNumber1, const void* strNumber2);
 
 // int型整数用十进制表示最多只有10位
@@ -20,7 +20,27 @@ char* g_StrCombine2 = new char[g_MaxNumberLength * 2 + 1];
 
 void PrintMinNumber(const int* numbers, int length)
 {
-	
+	//std::cout << (numbers == nullptr || length <= 0)<< std::endl;
+	if (numbers == nullptr || length <= 0)
+		return;
+
+	char** strNumbers = (char**)(new char*[length]);
+	for (int i = 0; i < length; ++i)
+	{
+		strNumbers[i] = new char[g_MaxNumberLength + 1];
+		snprintf(strNumbers[i], g_MaxNumberLength + 1 , "%d", numbers[i]);
+	}
+
+	qsort(strNumbers,length,sizeof(char*),compare);
+
+	for (int i = 0; i < length; ++i)
+		printf("%s", strNumbers[i]);
+	printf("\n");
+
+	for (int i = 0; i < length; ++i)
+		delete[] strNumbers[i];
+	delete[] strNumbers;
+	std::cout << "hehe" << std::endl;
 }
 
 // 如果[strNumber1][strNumber2] > [strNumber2][strNumber1], 返回值大于0
@@ -28,7 +48,13 @@ void PrintMinNumber(const int* numbers, int length)
 // 如果[strNumber1][strNumber2] < [strNumber2][strNumber1], 返回值小于0
 int compare(const void* strNumber1, const void* strNumber2)
 {
-	
+	strcpy_s(g_StrCombine1, g_MaxNumberLength * 2 + 1, (const char*)strNumber1);
+	strcat_s(g_StrCombine1, g_MaxNumberLength * 2 + 1, (const char*)strNumber2);
+
+	strcpy_s(g_StrCombine2, g_MaxNumberLength * 2 + 1, (const char*)strNumber2);
+	strcat_s(g_StrCombine2, g_MaxNumberLength * 2 + 1, (const char*)strNumber1);
+
+	return strcmp(g_StrCombine1, g_StrCombine2);
 }
 
 // ====================测试代码====================

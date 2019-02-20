@@ -9,27 +9,81 @@
 
 int InversePairsCore(int* data, int* copy, int start, int end);
 
+int merge(int* data, int* copy, int leftStart, int leftEnd, int rightEnd);
+
+void swap(int * a, int* b);
+
 int InversePairs(int* data, int length)
 {
 	if (data == nullptr || length <= 0) {
 		return 0;
 	}
 
-	int * copy = new int[length];
-	for (int i = 0; i < length; i++) {
-		copy[i] = data[i];
-	}
+	int * copy = new int[length]();
 
-	int index = InversePairsCore(data, copy, 0, length - 1);
+
+	int result = InversePairsCore(data, copy, 0, length - 1);
 	delete[] copy;
-	return index;
+	return result;
 }
 
 int InversePairsCore(int* data, int* copy, int start, int end)
 {
+	if (data == nullptr || copy == nullptr || start < 0 || end <= start) {
+		return 0;
+	}
+	if (start == end - 1) {
+		if (data[start] > data[end]) {
+			int temp = data[start];
+			data[start] = data[end];
+			data[end] = temp;
+			//std::cout << data[start] << " " << data[end] << std::endl;
+			return 1;
+		}
+		return 0;
+	}
+	int mid = (start + end) / 2;
+	int result = InversePairsCore(data, copy, start, mid) + InversePairsCore(data, copy, mid + 1, end);
+	//std::cout << result << std::endl;
+	int leftPtr = start;
+	int rightPtr = mid + 1;
+	int copyPtr = start;
+	while (leftPtr < mid + 1 && rightPtr < end + 1) {
+		if (data[leftPtr] > data[rightPtr]) {
+			copy[copyPtr] = data[rightPtr];
+			result += mid - leftPtr + 1;
+			copyPtr++;
+			rightPtr++;
+		}
+		else {
+			copy[copyPtr] = data[leftPtr];
+			//result += end - rightPtr + 1;
+			copyPtr++;
+			leftPtr++;
+		}
+	}
+	while (leftPtr < mid + 1) {
+		copy[copyPtr] = data[leftPtr];
+		copyPtr++;
+		leftPtr++;
+	}
+	while (rightPtr < end + 1) {
+		copy[copyPtr] = data[rightPtr];
+		copyPtr++;
+		rightPtr++;
+	}
+
+	for (int i = start; i <= end; i++) {
+		data[i] = copy[i];
+	}
 	
-	
-	return 0;
+	return result;
+}
+
+void swap(int* a, int* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
 // ====================测试代码====================
@@ -38,9 +92,11 @@ void Test(const char* testName, int* data, int length, int expected)
 	if (testName != nullptr)
 		printf("%s begins: ", testName);
 
-	if (InversePairs(data, length) == expected)
+	int result = InversePairs(data, length);
+	if (result == expected)
 		printf("Passed.\n");
 	else
+		//std::cout << "correct is: " << expected << " as now is: " << result << std::endl;
 		printf("Failed.\n");
 }
 

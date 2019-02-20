@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FB852EC5-1493-4482-8D77-E86C62C0CFBF}</ProjectGuid>
+    <ProjectGuid>{2A8C55B6-977A-4459-8C79-4A20BD824AEF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My33SquenceOfBST</RootNamespace>
+    <RootNamespace>OperatorOverloading</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,10 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MyStr.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="33_SquenceOfBST.cpp" />
+    <ClCompile Include="MyStr.cpp" />
+    <ClCompile Include="OperatorOverloading.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

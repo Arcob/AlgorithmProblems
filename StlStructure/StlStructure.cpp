@@ -21,7 +21,8 @@ int main()
 	/*int test1[] = { 1,2,3,4,5,6};
 	int * test2 = new int[6]();
 	const int i = returnConstInt();
-	int test[3];
+	const int length = 1;
+	int test[length];
 	int k = sizeof(int);
 	std::cout << sizeof(S3) << " " << returnConstInt() << " " << sizeof(&i) << std::endl;
 	testHeap();*/

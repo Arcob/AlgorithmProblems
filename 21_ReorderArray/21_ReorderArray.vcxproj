@@ -23,7 +23,7 @@
     <ProjectGuid>{193C2023-BB4D-4B43-B604-56F2215BCC43}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My21ReorderArray</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

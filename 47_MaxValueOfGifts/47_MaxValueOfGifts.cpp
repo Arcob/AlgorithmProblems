@@ -45,32 +45,31 @@ int getMaxValue_solution1(const int* values, int rows, int cols)
 
 int getMaxValue_solution2(const int* values, int rows, int cols)
 {
-	if (values == nullptr || rows <= 0 || cols <= 0)
+	if (values == nullptr || rows <= 0 || cols <= 0) {
 		return 0;
-
-	int* maxValues = new int[cols];
-	for (int i = 0; i < rows; ++i)
-	{
-		for (int j = 0; j < cols; ++j)
-		{
-			int left = 0;
-			int up = 0;
-
-			if (i > 0)
-				up = maxValues[j];
-
-			if (j > 0)
-				left = maxValues[j - 1];
-
-			maxValues[j] = std::max(left, up) + values[i * cols + j];
-		}
 	}
 
-	int maxValue = maxValues[cols - 1];
-
-	delete[] maxValues;
-
-	return maxValue;
+	int * cache = new int[cols]();
+	int * result = new int[cols]();
+	int colIndex = 0;
+	
+	while (colIndex < rows) {
+		result[0] = cache[0] + values[colIndex * cols];
+		for (int i = 1; i < cols; i++) {
+			result[i] = std::max(cache[i]+ values[colIndex * cols + i], result[i - 1] + values[colIndex * cols + i]);
+		}
+		colIndex++;
+		int * temp = cache;
+		cache = result;
+		result = temp;
+		//cache = result;
+		for (int i = 0; i < cols; i++) {
+			//std::cout << result[i] << std::endl;
+			result[i] = 0;
+		}
+	}
+	//std::cout << cache[cols - 1] << std::endl;
+	return cache[cols-1];
 }
 
 // ====================测试代码====================
