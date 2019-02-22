@@ -23,7 +23,7 @@
     <ProjectGuid>{C0C7F234-9AEB-453E-A4DC-1E29D4C0E696}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My3201PrintTreeFromTopToBottom</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

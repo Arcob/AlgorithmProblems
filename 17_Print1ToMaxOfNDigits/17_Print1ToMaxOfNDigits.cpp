@@ -4,9 +4,11 @@
 #include "pch.h"
 #include <iostream>
 #include <memory>
+#include <cstdio>
 
 void PrintNumber(char* number);
 bool Increment(char* number);
+void Swap(char* a, char* b);
 void Print1ToMaxOfNDigitsRecursively(char* number, int length, int index);
 
 //不会 之后看
@@ -14,7 +16,35 @@ void Print1ToMaxOfNDigitsRecursively(char* number, int length, int index);
 // ====================方法一====================
 void Print1ToMaxOfNDigits(int n)
 {
+	if (n <= 0)
+		return;
+
+	char* number = new char[n + 1];
+	number[n] = '\0';
+	Print1ToMaxOfNDigitsRecursively(number, n, -1);
+
+	delete[] number;
 	
+}
+
+void Print1ToMaxOfNDigitsRecursively(char* number, int length, int index) {
+	if (index == length - 1)
+	{
+		PrintNumber(number);
+		return;
+	}
+
+	for (int i = 0; i < 10; ++i)
+	{
+		number[index + 1] = i + '0';
+		Print1ToMaxOfNDigitsRecursively(number, length, index + 1);
+	}
+}
+
+void swap(char* a, char* b) {
+	char temp = *a;
+	*b = *a;
+	*a = temp;
 }
 
 // ====================公共函数====================
@@ -22,18 +52,14 @@ void Print1ToMaxOfNDigits(int n)
 // 打印出这个数字，并忽略开头的0
 void PrintNumber(char* number)
 {
-	bool isBeginning0 = true;
-	int nLength = strlen(number);
-
-	for (int i = 0; i < nLength; ++i)
-	{
-		if (isBeginning0 && number[i] != '0')
-			isBeginning0 = false;
-
-		if (!isBeginning0)
-		{
-			printf("%c", number[i]);
-		}
+	int index = 0;
+	while (number[index] == 0) {
+		index++;
+	}
+	
+	while (number[index] != '\0') {
+		printf("%c", number[index]);
+		index++;
 	}
 
 	printf("\t");

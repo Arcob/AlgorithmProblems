@@ -11,20 +11,16 @@ ListNode* ReverseList(ListNode* pHead)
 		return nullptr;
 	}
 	ListNode* pReversedHead = nullptr;
-	ListNode* pNode = pHead;
-	ListNode* pPrev = nullptr;
-	while (pNode != nullptr) {
-		ListNode* pNext = pNode->m_pNext;
-
-		if (pNext == nullptr) {
-			pReversedHead = pNode;
-		}
-
-		pNode->m_pNext = pPrev;
-		pPrev = pNode;
-		pNode = pNext;
+	ListNode* pNow = pHead;
+	ListNode* pPreview = nullptr;
+	while (pNow->m_pNext != nullptr) {
+		ListNode* pTemp = pNow->m_pNext;
+		pNow->m_pNext = pPreview;
+		pPreview = pNow;
+		pNow = pTemp;
 	}
-	return pReversedHead;
+	pNow->m_pNext = pPreview;
+	return pNow;
 }
 
 // ====================测试代码====================

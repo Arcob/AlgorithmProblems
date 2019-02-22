@@ -30,21 +30,21 @@ void ConvertNode(BinaryTreeNode* pNode, BinaryTreeNode** pLastNodeInList)
 		return;
 	}
 
-	BinaryTreeNode* pCurrent = pNode;
-
-	if (pCurrent->m_pLeft != nullptr) {
+	if (pNode->m_pLeft != nullptr) {
 		ConvertNode(pNode->m_pLeft, pLastNodeInList);
 	}
-	
-	pCurrent->m_pLeft = *pLastNodeInList;
-	if (*pLastNodeInList != nullptr)
-		(*pLastNodeInList)->m_pRight = pCurrent;
-	
-	*pLastNodeInList = pCurrent;
 
-	if (pCurrent->m_pRight != nullptr) {
+	pNode->m_pLeft = *pLastNodeInList;
+	if ((*pLastNodeInList) != nullptr) {
+		(*pLastNodeInList)->m_pRight = pNode;
+	}
+	*pLastNodeInList = pNode;
+
+
+	if (pNode->m_pRight != nullptr) {
 		ConvertNode(pNode->m_pRight, pLastNodeInList);
 	}
+
 }
 
 // ====================测试代码====================
