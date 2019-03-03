@@ -48,7 +48,17 @@ bool IsBalanced_Solution2(const BinaryTreeNode* pRoot)
 bool IsBalanced(const BinaryTreeNode* pRoot, int* pDepth)
 {
 	if (pRoot == nullptr) {
-		 
+		pDepth = 0;
+		return true;
+	}
+
+	int left, right;
+	if (IsBalanced(pRoot->m_pLeft, &left) && IsBalanced(pRoot->m_pLeft, &right)) {
+		int diff = left - right;
+		if (diff<1 && diff>-1) {
+			*pDepth = (left > right ? left : right)+1;
+			return true;
+		}
 	}
 
 	return false;
