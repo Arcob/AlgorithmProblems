@@ -3,6 +3,14 @@
 
 #include "pch.h"
 #include <iostream>
+#include "TestClass.h"
+
+#define MAX(a,b) ((a)>(b)?(a):(b))
+
+template <typename T>
+inline int max(const T& a, const T& b){
+	return a > b ? a : b;
+}
 
 int timer = 0;
 enum etest {
@@ -34,7 +42,7 @@ int f(int n) {
 
 int main()
 {
-	const int N = 10;
+	/*const int N = 10;
 	const int M = 2;
 	int* a = new int[N];
 	for (int i = 0; i < N; ++i)
@@ -46,6 +54,11 @@ int main()
 	for (int i = 0; i < M; ++i)
 		for (int j = 0; j < N / M; ++j)
 			printf("%d", b[i][j]);
+	*/
+	int i = 3;
+	std::cout << MAX(3, 2) << std::endl;
+	std::cout << MAX(3, 8) << std::endl;
+	std::cout << max(3, 8) << std::endl;
 	return 0;
 }
 

@@ -8,8 +8,13 @@ void test(const char* name, const char* in, int expected);
 
 int returnIndex(const char* in);
 
+static int i;
+
 int main()
 {
+	//static char* hehe = new char[5];
+	
+	std::cout << "i= " << i << std::endl;
 	test("Test 1", "a", 0);
 	test("Test 2", "aaa", 2);
 	test("Test 3", "b", 2);
