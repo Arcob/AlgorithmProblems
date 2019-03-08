@@ -12,37 +12,67 @@ public:
 	
 };
 
-class Child :private Parent
+class Child :public Parent
 {
 public:
 	int c = 1;
 	int foo() {
 		b++;
-		a++;
+		//a++;
+		return b;
+	}
+};
+
+class GrandChild : private Child {
+public :
+	int z;
+	using Parent::b;
+	int foo() {
+
+		Parent::b++;
+		//a++;
 		return b;
 	}
 };
 
 struct BE
 {
-	short number;
-	union UBffer
+	
+	long long test2;
+	//int b;
+	int a;
+	virtual void foo();
+	
+	
+	//short number;
+	//char a;
+	//char b;
+	
+	
+	
+	/*union UBffer
 	{
 		char buffer[13];
 		double number;
-	}bu;
+	}bu;*/
 	//char buffer[7];
 }bc;
+
+void BE::foo() {
+
+}
 
 int main()
 {
 	Child b;
 	Parent a;
+	GrandChild c;
 	
 	std::cout << "bc.sizeof = " << sizeof(bc) << std::endl;
 	//std::cout << b.foo() << std::endl;
 	std::cout << "a.sizeof = " << sizeof(a) << std::endl;
 	std::cout << "b.sizeof = " << sizeof(b) << std::endl;
+	std::cout << "c.sizeof = " << sizeof(c) << std::endl;
 
 	system("pause");
 	return 0;
