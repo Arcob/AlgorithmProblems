@@ -23,7 +23,7 @@
     <ProjectGuid>{E8E96973-9257-43E7-82B3-7E5EE667C474}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My5701TwoNumbersWithSum</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
