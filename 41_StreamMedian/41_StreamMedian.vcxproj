@@ -23,7 +23,7 @@
     <ProjectGuid>{FF20F39B-D7A7-402C-BDE3-0D15FD2E62AC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My41StreamMedian</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

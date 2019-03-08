@@ -23,7 +23,7 @@
     <ProjectGuid>{F0750046-5EFA-445C-8F17-70A6ECB03C29}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My5802LeftRotateString</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

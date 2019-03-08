@@ -23,7 +23,7 @@
     <ProjectGuid>{50FD52F5-D50A-42A3-812E-0E6901C24A24}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My29PrintMatrix</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

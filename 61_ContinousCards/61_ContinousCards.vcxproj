@@ -23,7 +23,7 @@
     <ProjectGuid>{8479597E-6990-4FD2-9366-40ADF5A3ACF2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My61ContinousCards</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
